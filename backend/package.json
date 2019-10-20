@@ -1,17 +1,22 @@
 {
   "name": "url-preview-backend",
+  "private": true,
   "description": "Desafio de Outubro da Código Falado.",
   "author": "Ashura <the.lucas2016@gmail.com>",
   "version": "1.0",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon --exec babel-node src/index.js"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
     "nodemon": "^1.19.4"
   }
 }

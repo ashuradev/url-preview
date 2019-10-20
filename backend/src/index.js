@@ -1,5 +1,12 @@
-const app = require('express')()
+import express from 'express'
+import dotenv from 'dotenv'
 
-app.get('/', (req, res) => res.write('Olá, mundo!'))
+dotenv.config()
 
-app.listen(3000, () => console.log('Running at http://127.0.0.1:3000')) 
+const app = express()
+
+app.get('/', (req, res) => res.json({
+    version: '1.0'
+}))
+
+app.listen(process.env.PORT, () => console.log(`Server is running at port ${process.env.PORT}`))
