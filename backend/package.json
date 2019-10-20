@@ -1,4 +1,9 @@
 {
+  "name": "url-preview-backend",
+  "description": "Desafio de Outubro da Código Falado.",
+  "author": "Ashura <the.lucas2016@gmail.com>",
+  "version": "1.0",
+  "license": "MIT",
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js"
