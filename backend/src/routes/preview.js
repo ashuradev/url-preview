@@ -23,6 +23,8 @@ router.post('/preview', async (req, res) => {
             throw err
         }
 
+        const url = req.body.url
+
         const body = await (await fetch(url)).text()
 
         const document = domino.createWindow(body).document
