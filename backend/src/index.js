@@ -1,12 +1,14 @@
-import express from 'express'
-import dotenv from 'dotenv'
+const express = require('express')
+const bodyParser = require('body-parser')
+const dotenv = require('dotenv')
 
-dotenv.config()
+const preview = require('./routes/preview')
 
 const app = express()
 
-app.get('/', (req, res) => res.json({
-    version: '1.0'
-}))
+dotenv.config()
+
+app.use(bodyParser.json())
+app.use(preview)
 
 app.listen(process.env.PORT, () => console.log(`Server is running at port ${process.env.PORT}`))
