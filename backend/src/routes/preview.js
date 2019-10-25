@@ -32,7 +32,7 @@ router.post('/preview', async (req, res) => {
         const domain = urlParser.parse(url).hostname
         
         // Irá procurar todas as meta tags do OG no HTML e retornar um array
-        const openGraphElements = Array.from(document.querySelectorAll('meta[property*="og"]'))
+        const openGraphElements = Array.from(document.querySelectorAll('meta[property*="og"]')) 
 
         // Aqui são os apelidos das propriedades das meta tags do OG
         // Exemplo, o nome da propriedade site_name irá ser substituída por sitename
@@ -53,6 +53,8 @@ router.post('/preview', async (req, res) => {
         }))
 
         crawledData.domain = domain;
+
+        res.json(crawledData)
 
     } catch (err) { 
         
