@@ -1,1 +1,1 @@
-web: yarn start --prefix backend
+web: npm start --prefix backend

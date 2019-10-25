@@ -1,5 +1,5 @@
 {
     "scripts": {
-        "postinstall": "yarn install --prefix backend"
+        "postinstall": "npm install --prefix backend"
     }
 }
