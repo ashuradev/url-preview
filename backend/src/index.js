@@ -9,6 +9,9 @@ const app = express()
 dotenv.config()
 
 app.use(bodyParser.json())
+
+// Add preview route
+
 app.use(preview)
 
 app.listen(process.env.PORT, () => console.log(`Server is running at port ${process.env.PORT}`))
