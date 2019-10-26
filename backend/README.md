@@ -16,24 +16,15 @@ API do Desafio 333 de Outubro feita utilizando as seguintes ferramentas:
 3. [Requisitos do sistema](#requisitos-do-sistema)
 4. [Como rodar o backend em ambiente de desenvolvimento](#como-rodar-o-backend-em-ambiente-de-desenvolvimento)
 
-## Demonstração
+# Demonstração
 
 A demo está em http://urlpreview333.herokuapp.com
 
-## Como funciona
+# Como funciona
 
 Para gerar uma preview de uma url, basta enviar um request do tipo POST para `/preview` com um corpo JSON contendo o `Content-type: application/json` e o parâmetro `url`.
 
-Exemplo de request:
-
-Cabeçalhos:
-
-```
-POST /preview
-Content-type: application/json
-```
-
-JSON:
+**Exemplo de request:**
 
 ```json
 {
@@ -41,7 +32,7 @@ JSON:
 }
 ```
 
-Exemplo de resposta:
+**Exemplo de resposta:**
 
 ```json
 {
@@ -57,12 +48,12 @@ Exemplo de resposta:
 }
 ```
 
-## Requisitos do sistema
+# Requisitos do sistema
 
 - NodeJS >=v10.16.3
 - Yarn >=1.19.1 ou npm>=6.9.0
 
-## Como rodar o backend em ambiente de desenvolvimento
+# Como rodar o backend em ambiente de desenvolvimento
 
 Rode os seguintes comandos
 
