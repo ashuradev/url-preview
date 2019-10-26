@@ -5,8 +5,6 @@ const urlParser = require('url')
 const fetch = require('node-fetch')
 const domino = require('domino')
 
-const { createObjectFromEntries } = require('./../utils/collections')
-
 router.post('/preview', async (req, res) => {
     // Trata todos os errors gerados na preview da URL
 
@@ -41,7 +39,7 @@ router.post('/preview', async (req, res) => {
             image: 'thumbnail'
         }
 
-        const crawledData = createObjectFromEntries(openGraphElements.map(node => {
+        const crawledData = Object.fromEntries(openGraphElements.map(node => {
             const property = node.getAttribute('property').replace('og:', '').replace(':', '_')
             
             const value = node.getAttribute('content')

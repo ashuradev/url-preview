@@ -5,6 +5,9 @@ const cors = require('cors')
 
 const preview = require('./routes/preview')
 
+// Polyfill do Object.fromEntries do ES9
+Object.fromEntries = arr => Object.assign({}, ...entries.map(([ key, value ]) => ({ [key]: value })))
+
 const app = express()
 
 dotenv.config()
