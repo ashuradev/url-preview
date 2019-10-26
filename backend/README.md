@@ -26,11 +26,14 @@ Para gerar uma preview de uma url, basta enviar um request do tipo POST para `/p
 
 Exemplo de request:
 
-```http
-POST /preview
+Cabeçalhos:
 
+```
+POST /preview
 Content-type: application/json
 ```
+
+JSON:
 
 ```json
 {
