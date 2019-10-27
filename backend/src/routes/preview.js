@@ -50,6 +50,18 @@ router.post('/preview', async (req, res) => {
             ]
         }))
 
+        if (!crawledData.title) {
+            const title = document.querySelector('title')
+
+            title && (crawledData.title = document.title)
+        }
+
+        if (!crawledData.description) {
+            const description = document.querySelectorAll('meta[name="description"]')[0]
+
+            description && (crawledData.description = description.getAttribute('content'))
+        }
+
         crawledData.domain = domain;
 
         res.json(crawledData)
